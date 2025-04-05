@@ -1,0 +1,36 @@
+{
+  "name": "simple-user-api",
+  "version": "1.0.0",
+  "description": "A simple Node.js Express API that connects to MongoDB",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "jest --detectOpenHandles",
+    "test:unit": "jest tests/unit",
+    "seed": "node src/utils/seedData.js"
+  },
+  "keywords": [
+    "express",
+    "mongodb",
+    "api",
+    "nodejs"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.3.1",
+    "zod": "^3.21.4"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0",
+    "mongodb-memory-server": "^8.13.0",
+    "nodemon": "^2.0.22",
+    "supertest": "^6.3.3"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "verbose": true
+  }
+} 
