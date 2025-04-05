@@ -11,7 +11,7 @@ A simple Node.js Express API that connects to a MongoDB database and retrieves u
 - Request validation with Zod
 - Error handling
 - Service-Repository-Controller architecture pattern
-- Unit and integration tests
+- Unit tests
 - Docker support
 - Makefile for streamlined development workflow
 
@@ -161,18 +161,13 @@ simple-user-api/
 │   ├── server.js       # Express app
 │   └── index.js        # App entry point
 ├── tests/
-│   ├── unit/           # Unit tests
-│   └── integration/    # Integration tests
+│   └── unit/           # Unit tests
 ├── Dockerfile          # Docker configuration
 ├── docker-compose.yml  # Docker Compose configuration
 ├── Makefile            # Make commands for common tasks
 ├── .env.example        # Example environment variables
 └── package.json        # Project metadata and dependencies
 ```
-
-## License
-
-ISC 
 
 ## Testing
 
@@ -192,19 +187,9 @@ This will add several sample users to the database, including:
 - Users with age > 21 (will be retrievable via the API)
 - Users with age <= 21 (will not be retrievable due to age filtering)
 
-### Testing the API
+### Manual Testing with curl
 
-You can use the provided script to test the API endpoints:
-
-```bash
-# Make the script executable (if needed)
-chmod +x test-api.sh
-
-# Run the test script
-./test-api.sh
-```
-
-Or manually test with curl:
+You can test the API endpoints manually using curl:
 
 ```bash
 # Health check
